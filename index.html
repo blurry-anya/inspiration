@@ -7,22 +7,24 @@
     <title>Main page</title>
     <link rel="stylesheet" href="styles/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-
+    <script src="./scripts/welcomePage.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Welcome to my site with all kinds of things</h1>
     </header>
     <main>
-        <nav id="sidebar">
+        <aside id="sidebar">
             <ul>
                 <li><a href="#">Elem1</a></li>
                 <li><a href="#">Elem2</a></li>
                 <li><a href="#">Elem3</a></li>
             </ul>
-        </nav>
-        <canvas id="welcome-page"><script src="scripts/welcomePage.js" defer></script></canvas>
-        <div></div>
+        </aside>
+        <section id="balls-animation" class="centered">
+            <div class="start-btn btn" role="button">Wanna see something cool?</div>
+        </section>
+        <!-- <div class="ball" style="background-color: red;"></div> -->
         <div></div>
     </main>
     <footer>
