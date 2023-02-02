@@ -1,83 +1,83 @@
 $(window).on('load', function () {
     "use strict";
 
+    // code for pasting js into css starts
+    // credit: https://stackoverflow.com/questions/59573722/how-can-i-set-a-css-keyframes-in-javascript
+    let dynamicStyles = null;
 
-    let initialBalls = [];
-
-    for (let index = 0; index < 10; index++) {
-        let ball = document.createElement("div");
-        ball.className = "ball";
-        ball.style.backgroundColor = getColor();
-        initialBalls.push(ball);
-    }
-
-    console.log(initialBalls);
-
-
-
-    // welcomeCanvas.addEventListener("click", function(event){
-    //     let ball = document.createElement("div");
-    //     ball.className = "ball";
-    //     ball.style.backgroundColor = getColor();
-    //     welcomeWindow.appendChild(ball)
-    // })
-
-    const FPS = 200;
-    let sizeBall = 6;
-    let ballX, ballY;
-    let xVel, yVel;
-    let color = getColor();
-
-    let welcomeCanvas = document.getElementById("welcome-page");
-    let context = welcomeCanvas.getContext("2d");
-
-    setInterval(update, 50 / FPS);
-
-    ballX = welcomeCanvas.width / 2;
-    ballY = welcomeCanvas.height / 2;
-
-    //ball starting speed - between 25 and 100 pps (pixels per second)
-    xVel = Math.floor(Math.random() * 76 + 25) / FPS;
-    yVel = Math.floor(Math.random() * 76 + 25) / FPS;
-
-    if (Math.floor(Math.random * 2) == 0) {
-        xVel = -xVel;
-    }
-
-    if (Math.floor(Math.random * 2) == 0) {
-        yVel = -yVel;
-    }
-
-    function update() {
-        // move the ball
-        ballX += xVel;
-        ballY += yVel;
-
-        if (ballX - sizeBall / 2 < 0 && xVel < 0) {
-            xVel = -xVel;
-        }
-        if (ballX + sizeBall / 2 > welcomeCanvas.width && xVel > 0) {
-            xVel = -xVel;
-        }
-        if (ballY - sizeBall / 2 < 0 && yVel < 0) {
-            yVel = -yVel;
-        }
-        if (ballY + sizeBall / 2 > welcomeCanvas.height && yVel > 0) {
-            yVel = -yVel;
+    function addAnimation(body) {
+        if (!dynamicStyles) {
+            dynamicStyles = document.createElement('style');
+            dynamicStyles.type = 'text/css';
+            document.head.appendChild(dynamicStyles);
         }
 
-
-        context.fillStyle = "#F2E1C1";
-        context.fillRect(0, 0, welcomeCanvas.width, welcomeCanvas.height);
-        // context.fillStyle = color;
-        // context.fillRect(ballX - sizeBall / 2, ballY - sizeBall / 2, sizeBall, sizeBall);
-        
-        context.beginPath();
-        context.arc(ballX, ballY, sizeBall, 0, 2 * Math.PI, false);
-        context.fillStyle = color;
-        context.fill();
+        dynamicStyles.sheet.insertRule(body, dynamicStyles.length);
     }
+    // code for pasting js into css ends
 
+    const ballsSection = document.querySelector("#balls-animation");
+    console.log(ballsSection.offsetWidth);
+
+    const startPositionX = ballsSection.offsetWidth/2;
+    const startPositionY = ballsSection.offsetHeight/2;
+
+    const borderX = ballsSection.offsetWidth - 20;
+    const borderY = ballsSection.offsetHeight - 20;
+
+    console.log(startPositionX, startPositionY)
+    console.log(borderX, borderY)
+    
+
+    addAnimation(`
+        @keyframes ball-moves-x {
+            from{
+                right: ${startPositionX}px;
+            } to {
+                right: ${borderX}px;
+            }
+        }
+    `);
+
+    addAnimation(`
+        @keyframes ball-moves-y {
+            from{
+                top: ${startPositionY}px;
+            } to {
+                top: ${startPositionY}px;
+            }
+        }
+    `);
+    
+    
+
+    let ball = document.createElement("div");
+    ball.className = "ball";
+    ball.style.backgroundColor = getColor();
+    
+    console.log(ball);
+
+    
+
+    document.querySelector(".start-btn").addEventListener("click",function(){
+        ballsSection.appendChild(ball);
+        ball.style.animation = "2s linear 0s infinite alternate ball-moves-x, 2s linear 0s infinite alternate ball-moves-y";
+    });
+
+    // let main = document.querySelector("main");
+
+    // let balls = [];
+    // for (let i = 0; i < 5; i++) {
+    //     balls.push(document.createElement("div"));
+    // }
+
+    // balls.map(ball => ball.className = "ball");
+    // balls.map(ball => ball.style.backgroundColor = getColor());
+    // balls.map(ball => ball.style.animation = "4s linear 0s infinite alternate move-eye");
+    // balls.map(ball => main.appendChild(ball));
+
+
+    // console.log(balls)
 
 
     function getColor() {
