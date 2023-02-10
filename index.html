@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,11 @@
     <link rel="stylesheet" href="styles/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
     <script src="./scripts/welcomePage.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <h1>Welcome to my site with all kinds of things</h1>
@@ -22,13 +27,22 @@
             </ul>
         </aside>
         <section id="balls-animation" class="centered">
+            <div class="animation-panel centered">
+                <p id="balls-clear">Clear</p>
+                <p id="balls-remove">Remove</p>
+                <div class="balls-counter-wrapper centered">
+                    <p id="balls-counter-label">Balls:</p>
+                    <p id="balls-counter">0</p>
+                </div>
+            </div>
+
             <div class="start-btn btn" role="button">Are you cool enough to click me?</div>
         </section>
-        <!-- <div class="ball" style="background-color: red;"></div> -->
         <div></div>
     </main>
     <footer>
         <div id="footer-info">Contact info</div>
     </footer>
 </body>
+
 </html>

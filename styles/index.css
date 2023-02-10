@@ -82,12 +82,11 @@ main{
 #balls-animation{
     width: 100%;
     height: 85vh;
-
 }
 
 .start-btn{
     width: 30%;
-    height: 3rem;
+    padding: .6rem;
     line-height: 3rem;
     font-size: 1.5rem;
     text-align: center;
@@ -98,6 +97,43 @@ main{
 
 .start-btn:hover{
     scale: 0.98;
+}
+
+.animation-panel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    gap: 1rem;
+    color: #B97A95;
+}
+
+#balls-counter-label{
+    margin-right: .5rem;
+}
+
+.limited{
+    color: rgb(144, 32, 32);
+    font-weight: 700;
+    transition: animation .3s;
+    animation: blinking 1s 3 ease-in-out;
+}
+
+@keyframes blinking {
+    from {color: rgb(143, 17, 17);}
+    to {color: #F2E1C1;}
+  }
+
+#balls-clear:hover, 
+#balls-remove:hover{
+    color: rgb(144, 32, 32);
+    cursor: pointer;
+}
+
+.invisible{
+    display: none;
 }
 
 footer{
@@ -119,7 +155,7 @@ footer{
     border-radius: 50%;
     position: absolute;
     text-align: center;
-    line-height: 30px;
+    line-height: 32px;
     z-index: 0;
     transition: filter .5s linear;
 }
@@ -129,8 +165,9 @@ footer{
     cursor: pointer;
 }
 
-.add-smile::after{
-    content: ':)';
+.white-text{
+    color: white;
+    font-size: 1.2rem;
 }
 
 #welcome-page{
