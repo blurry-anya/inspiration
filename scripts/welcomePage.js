@@ -215,9 +215,6 @@ $(window).on('load', function () {
 
     function addEmoji(element) {
         element.innerHTML = getRandomEmoji();
-        // setTimeout(() => {
-        //     element.innerHTML = '';
-        // }, 2000);
     }
 
     function getRandomEmoji() {

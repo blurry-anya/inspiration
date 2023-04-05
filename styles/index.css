@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -6,50 +6,53 @@
     z-index: 1;
 }
 
-.centered{
+.centered {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.btn{
+.btn {
     cursor: pointer;
 }
 
-header{
+header {
     width: 100%;
     height: 7rem;
     background-color: #716F81;
     display: flex;
     align-content: center;
 }
-h1{
+
+h1 {
     color: #F2E1C1;
     margin: auto;
-    font-size: 2em;
+    font-size: 1.8rem;
     text-align: center;
 }
-main{
+
+main {
     width: 100%;
     height: 85%;
     position: relative;
     background-color: #F2E1C1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
 }
 
-#sidebar{
+#sidebar {
     width: 20%;
-    min-height: 98%;
+    height: 83vh;
     background-color: #B97A95;
     margin: .5rem 0 auto .5rem;
     opacity: 0.8;
     position: absolute;
+    top: 0;
     z-index: 2;
 }
 
-#sidebar ul li a{
+#sidebar ul li a {
     text-decoration: none;
     color: #F2E1C1;
     width: 100%;
@@ -60,7 +63,7 @@ main{
     display: block;
 }
 
-#sidebar ul li{
+#sidebar ul li {
     width: 100%;
     height: 6%;
     position: relative;
@@ -69,22 +72,22 @@ main{
     justify-content: center;
 }
 
-#sidebar ul{
+#sidebar ul {
     width: 100%;
     height: 100%;
 }
 
-#sidebar ul li a:hover{
+#sidebar ul li a:hover {
     background-color: #F2E1C1;
     color: #716F81;
 }
 
-#balls-animation{
+#balls-animation {
     width: 100%;
     height: 85vh;
 }
 
-.start-btn{
+.start-btn {
     width: 30%;
     padding: .6rem;
     line-height: 3rem;
@@ -95,11 +98,11 @@ main{
     transition: all .2s linear;
 }
 
-.start-btn:hover{
+.start-btn:hover {
     scale: 0.98;
 }
 
-.animation-panel{
+.animation-panel {
     position: absolute;
     top: 0;
     right: 0;
@@ -110,11 +113,11 @@ main{
     color: #B97A95;
 }
 
-#balls-counter-label{
+#balls-counter-label {
     margin-right: .5rem;
 }
 
-.limited{
+.limited {
     color: rgb(144, 32, 32);
     font-weight: 700;
     transition: animation .3s;
@@ -122,21 +125,26 @@ main{
 }
 
 @keyframes blinking {
-    from {color: rgb(143, 17, 17);}
-    to {color: #F2E1C1;}
-  }
+    from {
+        color: rgb(143, 17, 17);
+    }
 
-#balls-clear:hover, 
-#balls-remove:hover{
+    to {
+        color: #F2E1C1;
+    }
+}
+
+#balls-clear:hover,
+#balls-remove:hover {
     color: rgb(144, 32, 32);
     cursor: pointer;
 }
 
-.invisible{
+.invisible {
     display: none;
 }
 
-footer{
+footer {
     width: 100%;
     height: 6rem;
     background-color: #716F81;
@@ -144,14 +152,14 @@ footer{
     align-content: center;
 }
 
-#footer-info{
+#footer-info {
     color: #F2E1C1;
     margin: auto;
     font-size: 1.5em;
     text-align: center;
 }
 
-.ball{
+.ball {
     border-radius: 50%;
     position: absolute;
     text-align: center;
@@ -160,17 +168,31 @@ footer{
     transition: filter .5s linear;
 }
 
-.ball:hover{
+.ball:hover {
     filter: invert(0.8);
     cursor: pointer;
 }
 
-.white-text{
+.white-text {
     color: white;
     font-size: 1.2rem;
 }
 
-#welcome-page{
+#welcome-page {
     width: 100%;
     height: 100%;
+}
+
+#color-game {
+    height: 85vh;
+    width: 80%;
+    margin-left: 20%;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -5,196 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Yaroslav</title>
-
-    <style>
-        body,
-        html {
-            /* height: 98%; */
-            margin: 0;
-        }
-
-        div {
-            /* width: 2%; */
-            /* height: 0; */
-            /* margin:1px; */
-            /* padding-bottom:2%; */
-            /* background-color: aqua; */
-            /* border: 1px solid black; */
-        }
-
-        h2,
-        h3 {
-            width: fit-content;
-            line-height: 2em;
-            margin: auto;
-        }
-
-        h3 {
-            line-height: 1em;
-            margin-bottom: 1vh;
-        }
-
-        .gachiStyle {
-            color: white;
-            /* background-image: url("https://64.media.tumblr.com/24009560ff2cdee2825d72a094614bd2/9ab81139e7fcde5b-df/s250x250_c1/211714eab795e0c4685c1e607bece4094166e2a2.gifv"); */
-            background-image: url("https://64.media.tumblr.com/4cf6c95ce055b63ef84ec1b0acd3a13d/99b31d881b9f2b9c-7a/s400x600/205d0ac974dd57790e96c77bbe524217ff94f596.gif");
-            /* background-image: url('https://media.tenor.com/BSYeNq2POsQAAAAM/gachimuchi.gif'); */
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .wrapper-big{
-            width: 98vw;
-            height: 90vh;
-            position: absolute;
-            margin: 0 1vw 0 1vw;
-        }
-
-        #wrapper {
-            width: 100%;
-            height: 100%;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-content: center;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .row {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .fill-white {
-            background-color: white;
-        }
-
-        .clear-background {
-            background-color: none;
-        }
-    </style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="./scripts//discoverPicture.js" defer></script>
+    
+    <link rel="stylesheet" href="./styles/discoverPicture.css">
+    
+    <title>Discover Picture</title>
 </head>
 
 <body>
 
-    <h2>Demo for Light :)</h2>
+    <h2>What is behind? :)</h2>
     <h3>use your mouse and press shift btw</h3>
 
     <div class="wrapper-big">
         <div id="wrapper"></div>
     </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>
-
-        let wrapper = document.querySelector('#wrapper');
-        let wrapperWidth = $("#wrapper").width();
-        let wrapperHeight = $("#wrapper").height();
-        let cellRatio = 4;
-        let cellSize = wrapperWidth * cellRatio / 100;
-        let columns = parseInt(wrapperWidth / cellSize)
-        let rows = parseInt(wrapperHeight / cellSize)
-        console.log("size w on h",wrapperWidth, wrapperHeight)
-        console.log("calculated cell size",cellSize)
-        console.log("amount of columns",columns);
-        console.log("amount of rows",rows);
-        console.log("total amount of cells", columns * rows);
-       
-
-        console.log("actual height:", (cellSize*rows));
-
-        console.log("redundant width:", wrapperWidth - (cellSize*columns));
-        console.log("redundant height:", wrapperHeight - (cellSize*rows));
-
-        console.log("percantage of width: ", (100-(cellSize*columns*100)/wrapperWidth));
-        console.log("percantage of height: ", (100-(cellSize*rows*100)/wrapperHeight));
-
-
-        wrapper.style.height = `${(cellSize*rows*100)/wrapperHeight}%`;
-        wrapper.style.width = `${(cellSize*columns*100)/wrapperWidth - 1}%`;
-
-        // wrapper.style.marginTop = `${(100-(cellSize*rows*100)/wrapperHeight)/2/2}%`;
-        // wrapper.style. = `${(100-(cellSize*rows*100)/wrapperHeight)/2/2}%`;
-
-
-
-        for (let i = 0; i < rows; i++) {
-            let divRow = document.createElement('div');
-            divRow.className = "row";
-            for (let j = 0; j < columns; j++) {
-                let cell = document.createElement('div');
-                cell.style.width = `${cellSize}px`;
-                cell.style.height = `${cellSize}px`;
-                divRow.appendChild(cell);
-            }
-            wrapper.appendChild(divRow);
-        }
-
-
-        function getColor() {
-            let colors = ["red", "blue", "yellow", "green", "orange", "pink", "purple", "white"];
-            return colors[getRandomInt(colors.length)]
-        }
-
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        let boxs = document.querySelectorAll('#wrapper .row div');
-
-
-        // for (const box of boxs) {
-        //     box.style.backgroundColor = getColor();
-        // }
-
-        // wrapper.style.backgroundColor = 'black'
-
-
-
-
-
-
-        // each cell is a pic
-        for (const box of boxs) {
-            box.addEventListener('mouseover', function (e) {
-                if (e.shiftKey) {
-                    e.target.classList.add('gachiStyle');
-                }
-            });
-        }
-
-
-        // whole pic at the back
-        // wrapper.classList.add('gachiStyle');
-
-        // for (const box of boxs) {
-        //     box.classList.add("fill-white");
-        // }
-
-        // for (const box of boxs) {
-        //     box.addEventListener('mouseover', function (e) {
-        //         if (e.shiftKey) {
-        //             e.target.classList.remove("fill-white");
-        //             // e.target.classList.add('clear-background');
-        //         }
-        //     });
-        // }
-
-
-
-
-    </script>
-
 </body>
 
 </html>

@@ -5,24 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main page</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/colorGame.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
     <script src="./scripts/welcomePage.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/colorGame.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Fun is here</title>
 </head>
 
 <body>
     <header>
-        <h1>Welcome to my site with all kinds of things</h1>
+        <h1>Yo! Promise to have fun here :)</h1>
     </header>
     <main>
         <aside id="sidebar">
             <ul>
-                <li><a href="#">Elem1</a></li>
-                <li><a href="#">Elem2</a></li>
+                <li><a href="#balls-animation">Bouncing Balls</a></li>
+                <li><a href="#color-game" id="goToColorGame">Coloring game</a></li>
                 <li><a href="#">Elem3</a></li>
             </ul>
         </aside>
@@ -38,10 +42,25 @@
 
             <div class="start-btn btn" role="button">Are you cool enough to click me?</div>
         </section>
-        <div></div>
+        <div class="section-separator"></div>
+        <section id="color-game" class="invisible">
+            <div class="game-header-wrapper">
+                <div class="color-panel">
+                    <div class="active-color"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="header">Press Space to color a cell</div>
+            </div>
+            <div class="table-wrapper"></div>
+        </section>
     </main>
     <footer>
-        <div id="footer-info">Contact info</div>
+        <div id="footer-info">Created by Anna Kononchenko</div>
     </footer>
 </body>
 
