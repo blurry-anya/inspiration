@@ -1,3 +1,3 @@
-# this is gonna be my pet project
+# Just stuff for fun
 
-no additional info yet
+Vanilla JavaScript, bouncing balls implementation + coloring game
