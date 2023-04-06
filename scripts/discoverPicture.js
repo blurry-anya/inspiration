@@ -7,25 +7,6 @@ const initPictureGame = () => {
   let cellSize = (wrapperWidth * cellRatio) / 100;
   let columns = parseInt(wrapperWidth / cellSize);
   let rows = parseInt(wrapperHeight / cellSize);
-  console.log("size w on h", wrapperWidth, wrapperHeight);
-  console.log("calculated cell size", cellSize);
-  console.log("amount of columns", columns);
-  console.log("amount of rows", rows);
-  console.log("total amount of cells", columns * rows);
-
-  console.log("actual height:", cellSize * rows);
-
-  console.log("redundant width:", wrapperWidth - cellSize * columns);
-  console.log("redundant height:", wrapperHeight - cellSize * rows);
-
-  console.log(
-    "percantage of width: ",
-    100 - (cellSize * columns * 100) / wrapperWidth
-  );
-  console.log(
-    "percantage of height: ",
-    100 - (cellSize * rows * 100) / wrapperHeight
-  );
 
   wrapper.style.height = `${cellSize * rows}px`;
   wrapper.style.width = `${(cellSize * columns * 100) / wrapperWidth - 1}%`;

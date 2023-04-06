@@ -7,6 +7,8 @@ const colorGameLink = document
     colorGame.classList.remove("invisible");
     colorGame.classList.add("flex-centered");
     document.querySelector("#balls-animation").classList.add('invisible')
+    document.querySelector("#picture-game").classList.add('invisible');
+    document.querySelector("#picture-game").classList.remove("flex-centered");
     stopFlag = true;
     removePictureGame();
 

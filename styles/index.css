@@ -89,6 +89,7 @@ main {
 
 .start-btn {
     width: 30%;
+    margin-left: 20%;
     padding: .6rem;
     line-height: 3rem;
     font-size: 1.5rem;
@@ -198,3 +199,16 @@ footer {
     justify-content: center;
 }
 
+#name-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#name-link:visited {
+    color: inherit;
+}
+
+
+#name-link:hover {
+    color: white;
+}

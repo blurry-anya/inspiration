@@ -1,5 +1,5 @@
 const initColorGame = () => {
-  const colorsArray = ["red", "green", "blue", "yellow", "black"];
+  const colorsArray = ["#CFD186", "#5B8C5A", "#4A7B9D", "#AC3931", "#482C3D"];
 
   let wrapper = document.querySelector(".table-wrapper");
   let wrapperWidth = $(".table-wrapper").width();
@@ -8,16 +8,6 @@ const initColorGame = () => {
   let cellSize = (wrapperWidth * cellRatio) / 100;
   const columns = parseInt(wrapperWidth / cellSize);
   const rows = parseInt(wrapperHeight / cellSize);
-
-  console.log("size w on h", wrapperWidth, wrapperHeight);
-  console.log("calculated cell size", cellSize);
-  console.log("amount of columns", columns);
-  console.log("amount of rows", rows);
-  console.log("total amount of cells", columns * rows);
-
-  console.log("rows: " + rows);
-  console.log("columns: " + columns);
-  console.log("cell size: " + cellSize);
 
   wrapper.style.height = `${(cellSize * rows * 100) / wrapperHeight}%`;
   wrapper.style.width = `${(cellSize * columns * 100) / wrapperWidth - 1}%`;
@@ -91,5 +81,4 @@ const initColorGame = () => {
 const removeColorGame = () => {
   $(".table-wrapper .cell").remove();
   $(".table-wrapper .row").remove();
-}
-
+};

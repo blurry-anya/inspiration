@@ -7,7 +7,7 @@
 
 .header{
   width:60%;
-  line-height: 1.8em;
+  line-height: 4rem;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -82,6 +82,23 @@
 }
 
 /* picture game */
+.picture-header-wrapper{
+  justify-content: space-between;
+}
+.url-panel{
+  width: 30%;
+}
+
+#image-url{
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+  background-color: inherit;
+  color: #716F81;
+  padding: .5rem;
+  border: none;
+  border-bottom: 1px solid #716F81 ;
+}
+
 .picture-bgr {
   background-image: url('https://media3.giphy.com/media/3oEdv7z5QF12TqRfnq/giphy.gif?cid=ecf05e477nt7iun0dnyzqmdtuknk8rrh2qmbv16ter9a1w03&rid=giphy.gif&ct=g');
   background-repeat: no-repeat;
