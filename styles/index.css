@@ -201,6 +201,7 @@ footer {
 #name-link {
     text-decoration: none;
     cursor: pointer;
+    color: inherit;
 }
 
 #name-link:visited {
