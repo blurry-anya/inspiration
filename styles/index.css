@@ -183,7 +183,8 @@ footer {
     height: 100%;
 }
 
-#color-game {
+#color-game,
+#picture-game {
     height: 85vh;
     width: 80%;
     margin-left: 20%;
@@ -196,3 +197,4 @@ footer {
     align-items: center;
     justify-content: center;
 }
+

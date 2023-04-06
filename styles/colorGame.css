@@ -1,4 +1,5 @@
-.game-header-wrapper{
+.game-header-wrapper,
+.picture-header-wrapper{
   width: 100%;
   height: 10%;
   display: flex;
@@ -49,7 +50,8 @@
 }
 
 
-.table-wrapper{
+.table-wrapper,
+.image-wrapper{
   width: 100%;
   height: 90%;
   display: flex;
@@ -77,4 +79,19 @@
 @keyframes blinkingBorder {
   from {border: 2px solid pink;}
   to {border: 2px solid red;}
+}
+
+/* picture game */
+.picture-bgr {
+  background-image: url('https://media3.giphy.com/media/3oEdv7z5QF12TqRfnq/giphy.gif?cid=ecf05e477nt7iun0dnyzqmdtuknk8rrh2qmbv16ter9a1w03&rid=giphy.gif&ct=g');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fill-background {
+  background-color: #F2E1C1;
+}
+
+.clear-background {
+  background-color: none;
 }

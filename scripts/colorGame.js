@@ -88,12 +88,8 @@ const initColorGame = () => {
   });
 };
 
-const colorGameLink = document
-  .querySelector("#goToColorGame")
-  .addEventListener("click", () => {
-    const colorGame = document.querySelector("#color-game");
-    colorGame.classList.remove("invisible");
-    colorGame.classList.add("flex-centered");
-    document.querySelector("#balls-animation").classList.add('invisible')
-    initColorGame();
-  });
+const removeColorGame = () => {
+  $(".table-wrapper .cell").remove();
+  $(".table-wrapper .row").remove();
+}
+

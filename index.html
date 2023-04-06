@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="styles/colorGame.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
     <script src="./scripts/welcomePage.js" defer></script>
-    <script src="./scripts/main.js" defer></script>
     <script src="./scripts/colorGame.js" defer></script>
+    <script src="./scripts/discoverPicture.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,9 +26,9 @@
     <main>
         <aside id="sidebar">
             <ul>
-                <li><a href="#balls-animation">Bouncing Balls</a></li>
+                <li><a href="#balls-animation" id="goToBouncingBalls">Bouncing Balls</a></li>
                 <li><a href="#color-game" id="goToColorGame">Coloring game</a></li>
-                <li><a href="#">Elem3</a></li>
+                <li><a href="#picture-game" id="goToPictureGame">Discover Picture</a></li>
             </ul>
         </aside>
         <section id="balls-animation" class="centered">
@@ -42,7 +43,6 @@
 
             <div class="start-btn btn" role="button">Are you cool enough to click me?</div>
         </section>
-        <div class="section-separator"></div>
         <section id="color-game" class="invisible">
             <div class="game-header-wrapper">
                 <div class="color-panel">
@@ -57,6 +57,15 @@
                 <div class="header">Press Space to color a cell</div>
             </div>
             <div class="table-wrapper"></div>
+        </section>
+        <section id="picture-game" class="invisible">
+            <div class="picture-header-wrapper">
+                <div class="url-panel">
+                    <input type="text" name="imageUrl" id="image-url" placeholder="Link to your image">
+                </div>
+                <div class="header">You can pass your own image here</div>
+            </div>
+            <div class="image-wrapper"></div>
         </section>
     </main>
     <footer>
