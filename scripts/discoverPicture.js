@@ -9,7 +9,7 @@ const initPictureGame = () => {
   let rows = parseInt(wrapperHeight / cellSize);
 
   wrapper.style.height = `${cellSize * rows}px`;
-  wrapper.style.width = `${(cellSize * columns * 100) / wrapperWidth - 1}%`;
+  wrapper.style.width = `${cellSize * columns}px`;
 
   for (let i = 0; i < rows; i++) {
     let divRow = document.createElement("div");
